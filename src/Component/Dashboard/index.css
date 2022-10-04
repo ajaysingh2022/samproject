@@ -1,0 +1,143 @@
+.main-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(239 246 255);
+}
+
+.header-container {
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    width: 100%;
+    background-color: #9ccaf3;
+}
+
+.left_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0.75rem;
+}
+
+.image-div {
+    flex: none;
+    margin-right: 4rem;
+    border-radius: 0.75rem;
+}
+.image-div img{
+    height:4rem;    
+}
+.center-header{
+    
+    display: inline-flex;
+    flex:auto;
+    text-align: center;
+    padding: 0.5rem;
+}
+.dropdown{
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: white;
+    font-weight: 600;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 135px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 5px 5px;
+    margin-right: 100%;
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+
+.drop {
+    cursor: pointer;
+
+}
+
+.drop:hover {
+    color: black;
+
+}
+.drop_hover{
+    background: #fff;
+    margin-right: 0.5rem;
+}
+
+.drop_hover:hover {
+    color: gray;
+}
+
+.styledInput {
+
+    border-radius: 9999px;
+    padding: 0.1rem 0.75rem;
+    background-color: rgb(241 245 249);
+    margin-right: 0.5rem;
+
+}
+
+.styledInput input {
+    width: 6rem;
+    height: 1rem;
+    background-color: rgb(241 245 249);
+    border: 0;
+    margin-left: 0.2rem;    
+}
+.styledInput input:focus{
+    outline: none;
+}
+.styledInput:focus-visible {
+    outline: 0;
+}
+
+.down-content {
+    display: none;
+    position: absolute;
+    width: 190px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 5px 5px;
+    margin-right: 100%;
+    cursor: pointer;
+    left: 85%;
+    border-radius: 5%;
+
+}
+
+.down:hover .down-content {
+    display: block;
+
+}
+
+.circle {
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.square {
+    height: 2rem;
+    width: 2rem;
+}
+.right-header{
+    
+    flex: 1;
+    align-items: center;
+}
+.right-header-inner{
+    
+    display: flex ;
+    justify-content: end;
+    margin-right: 0.5rem;
+    align-items: center;
+}
