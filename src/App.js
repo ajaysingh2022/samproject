@@ -1,10 +1,13 @@
 import './App.css';
 import Dashboard from './Component/Dashboard/index'
+import Subscription from './Component/Subscription/index'
 
 function App() {
   return (
     <div >
-      <Dashboard />
+      {/* <Dashboard /> */}
+     
+      <Subscription />
     </div>
   );
 }
