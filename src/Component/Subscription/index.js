@@ -5,6 +5,7 @@ import Highlighter from 'react-highlight-words';
 import { SearchOutlined } from '@ant-design/icons';
 import {FaRegEdit} from 'react-icons/fa'
 import {AiFillDelete} from 'react-icons/ai'
+import Adduser from '../APIaction/Adduser';
 
 const Index = () => {
     const [data, setData] = useState([])
@@ -172,6 +173,7 @@ const Index = () => {
 
     return (
         <>
+        <Adduser className="add-user-button"/>
             <Table
                 columns={columns}
                 dataSource={data}
