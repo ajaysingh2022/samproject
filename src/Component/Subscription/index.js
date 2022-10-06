@@ -4,11 +4,11 @@ import './index.css'
 import Highlighter from 'react-highlight-words';
 import { SearchOutlined } from '@ant-design/icons';
 import {FaRegEdit} from 'react-icons/fa'
-import {AiFillDelete} from 'react-icons/ai'
 import Adduser from '../APIaction/Adduser';
+import Deleteuser from '../APIaction/Deleteuser';
 
 const Index = () => {
-    const [data, setData] = useState([])
+    const [data, setData] = useState({})
     const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
     const searchInput = useRef(null);
@@ -165,15 +165,17 @@ const Index = () => {
         },
         {
             title:'Action',
-            render: () => <><Button style={{border:"none", outline:"none", background:"transparent"}}><FaRegEdit /></Button>
-            <Button style={{border:"none", outline:"none", background:"transparent"}}><AiFillDelete  /></Button>
+            render: (dataIndex) => <><Button style={{border:"none", outline:"none", background:"transparent"}}><FaRegEdit /></Button>
+            {/* <Deleteuser dataSource={data} dataIndex={dataIndex}/> */}
             </>
         }
     ];
 
     return (
         <>
-        <Adduser className="add-user-button"/>
+        <div className="add-user-button">
+        <Adduser />
+        </div>
             <Table
                 columns={columns}
                 dataSource={data}

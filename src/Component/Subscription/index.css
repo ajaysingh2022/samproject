@@ -1,5 +1,7 @@
 @import '~antd/dist/antd.css';
 
 .add-user-button{
-   
+   display: inline-flex;
+   justify-content: flex-end;
+   width: 100%;
 }
