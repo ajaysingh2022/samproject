@@ -3,12 +3,12 @@ import { Button,Input, Space, Table } from 'antd';
 import './index.css'
 import Highlighter from 'react-highlight-words';
 import { SearchOutlined } from '@ant-design/icons';
-import {FaRegEdit} from 'react-icons/fa'
 import Adduser from '../APIaction/Adduser';
 import Deleteuser from '../APIaction/Deleteuser';
+import Edituser from '../APIaction/Edituser';
 
 const Index = () => {
-    const [data, setData] = useState({})
+    const [data, setData] = useState([])
     const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
     const searchInput = useRef(null);
@@ -165,9 +165,13 @@ const Index = () => {
         },
         {
             title:'Action',
-            render: (dataIndex) => <><Button style={{border:"none", outline:"none", background:"transparent"}}><FaRegEdit /></Button>
-            {/* <Deleteuser dataSource={data} dataIndex={dataIndex}/> */}
+            render: (dataIndex) =>{
+            return( 
+            <>
+            <Edituser dataSource={data} dataIndex={dataIndex} />
+            <Deleteuser dataSource={data} dataIndex={dataIndex} />
             </>
+            )}
         }
     ];
 

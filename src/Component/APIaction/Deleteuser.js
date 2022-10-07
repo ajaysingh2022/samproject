@@ -5,15 +5,16 @@ import { AiFillDelete } from 'react-icons/ai'
 
 const Deleteuser = (props) => {
     const [userdata, setUserData] = React.useState([props.dataSource ? props.dataSource : userdata])
-    console.log(props);
+    // console.log("props",props);
 
 
 
-    const deleteUser = (id) => {
-        fetch(`https://633420df433198e79dd0869d.mockapi.io/subscription/${id}`, {
+    const deleteUser = (Id) => {
+        console.log("id", Id);
+        fetch(`https://633420df433198e79dd0869d.mockapi.io/subscription/${Id}`, {
             method: 'DELETE'
         })
-            .then((result) => result.json())
+            .then(result => result.json())
             .then((resp) => {
                 console.log("deleteuser", resp);
                 setUserData(resp)
@@ -23,7 +24,7 @@ const Deleteuser = (props) => {
     }
     return (
         <>
-            <Button onClick={() => deleteUser(props.dataIndex.id)} style={{ border: "none", outline: "none", background: "transparent" }}><AiFillDelete /></Button>
+            <Button onClick={() => deleteUser(props.dataIndex.Id)} style={{ border: "none", outline: "none", background: "transparent" }}><AiFillDelete /></Button>
         </>
     )
 }
