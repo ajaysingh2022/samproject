@@ -6,6 +6,7 @@ import { SearchOutlined } from '@ant-design/icons';
 import Adduser from '../APIaction/Adduser';
 import Deleteuser from '../APIaction/Deleteuser';
 import Edituser from '../APIaction/Edituser';
+import Dashboard from '../Dashboard/index.js'
 
 const Index = () => {
     const [data, setData] = useState([])
@@ -177,10 +178,11 @@ const Index = () => {
 
     return (
         <>
+        <Dashboard />
         <div className="add-user-button">
         <Adduser />
         </div>
-            <Table
+            <Table className='subs-table'
                 columns={columns}
                 dataSource={data}
             />
