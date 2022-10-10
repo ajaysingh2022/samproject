@@ -2,7 +2,6 @@ import { PlusOutlined } from '@ant-design/icons';
 import { Button, Col, DatePicker, Drawer, Form, Input, Row, Select, Space, InputNumber } from 'antd';
 import React, { useState } from 'react';
 import moment from 'moment';
-import './adduser.css'
 
 const { Option } = Select;
 const dateFormat = 'YYYY/MM/DD';
@@ -61,7 +60,7 @@ const Adduser = (props) => {
     };
     return (
         <>
-            <Button type="primary" onClick={showDrawer} icon={<PlusOutlined />} className="add-user">
+            <Button type="primary" onClick={showDrawer} icon={<PlusOutlined />}>
                 Add Subscription
             </Button>
             <Drawer
